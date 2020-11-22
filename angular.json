@@ -28,9 +28,11 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
@@ -65,7 +67,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "termprojectwebauthn-frontend:build"
+            "browserTarget": "termprojectwebauthn-frontend:build",
+            "proxyConfig": "proxy.config.json",
+            "ssl": true,
+            "sslCert": "localhost.crt",
+            "sslKey": "localhost.key"
           },
           "configurations": {
             "production": {
@@ -91,6 +97,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []

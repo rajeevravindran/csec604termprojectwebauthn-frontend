@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>WebAuthn Registration Successful</h1>
+<div mat-dialog-content>
+    <pre>
+        <!-- {{ data | json }} -->
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{ data.display_name }}</mat-card-title>
+              <mat-card-subtitle>{{ data.user.username }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <pre>
+                  {{ data | json }}
+              </pre>
+            </mat-card-content>
+          </mat-card>
+    </pre>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</div>
